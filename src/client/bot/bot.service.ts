@@ -6,7 +6,7 @@ import * as  path from "path";
 import { createReadStream } from "fs";
 
 import { CategoryService, Food, FoodService } from '@modules';
-import { inlineKeyboard } from 'telegraf/typings/markup';
+import { inlineKeyboard, keyboard } from 'telegraf/typings/markup';
 
 
 @Injectable()
@@ -91,6 +91,7 @@ export class BotService {
             category.forEach(food => {
                 inline_keyboard.push([{ text: food.name, callback_data: `food_${food.id}` }])
             })
+            inline_keyboard.push([{ text: "back", callback_data: `Back` }])
 
             context.reply('foods', {
                 reply_markup: {
@@ -133,11 +134,14 @@ Description: ${food[0].description}
                     reply_markup: {
                       inline_keyboard: [
                         [{callback_data: 'add', text: "+"}, {callback_data: "count", text: "0"},{callback_data: "minus", text: "-"}],
-                        [{callback_data: "order", text: "Order now"}]
+                        [{callback_data: "wishlist", text: "Cart"}],
+                        [{callback_data: "back", text: "Back"}],
+                        
                     ],
+                    // keyboard: [[{text: "My Cart"}]],
                       resize_keyboard: true,
-                      one_time_keyboard: true
                   },
+          
 
                 },
 
