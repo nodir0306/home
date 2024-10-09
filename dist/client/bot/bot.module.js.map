@@ -1,0 +1,1 @@
+{"version":3,"file":"bot.module.js","sourceRoot":"","sources":["../../../src/client/bot/bot.module.ts"],"names":[],"mappings":";;;;;;;;;AAAA,4CAAsD;AACtD,+CAA2C;AAC3C,2CAAwC;AAOjC,IAAM,SAAS,GAAf,MAAM,SAAS;CAAE,CAAA;AAAX,8BAAS;oBAAT,SAAS;IALrB,IAAA,eAAM,EAAC;QACJ,SAAS,EAAE,CAAC,wBAAU,CAAC;QACvB,OAAO,EAAE,CAAC,yBAAc,EAAE,qBAAU,CAAC;KAExC,CAAC;GACW,SAAS,CAAE"}
